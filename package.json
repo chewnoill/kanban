@@ -1,0 +1,21 @@
+{
+  "name": "kanban",
+  "version": "1.0.0",
+  "repository": "git@github.com:chewnoill/kanban.git",
+  "author": "Will Cohen <chewnoill@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "prettier": "^1.17.1"
+  },
+  "dependencies": {
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "format": "prettier '**/*.{ts,tsx,json,graphql}' --write",
+    "server": "cd packages/server && yarn"
+  }
+}
