@@ -1,3 +1,6 @@
+const environment = process.env.NODE_ENV || 'development'
+const development = environment === 'development'
+
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
@@ -9,9 +12,7 @@ module.exports = {
       '@snowpack/plugin-run-script',
       {
         name: 'Server Console',
-        // We only want to run the server in development
-        cmd: '',
-        watch: 'cd ../server && yarn start',
+        cmd: development ? 'cd ../server && yarn start' : 'true',
       },
     ],
     '@snowpack/plugin-dotenv',

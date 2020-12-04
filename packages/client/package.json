@@ -5,7 +5,7 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
-    "test": "web-test-runner \"src/**/*.test.tsx\""
+    "test": "NODE_ENV=test web-test-runner \"src/**/*.test.tsx\""
   },
   "dependencies": {
     "preact": "^10.5.4"
@@ -19,6 +19,7 @@
     "@testing-library/preact": "^2.0.0",
     "@types/chai": "^4.2.14",
     "@types/mocha": "^8.0.4",
+    "@web/test-runner": "^0.10.0",
     "chai": "^4.2.0",
     "prettier": "^2.0.5",
     "snowpack": "^2.17.1",
