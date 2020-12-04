@@ -15,3 +15,8 @@ Runs the test suites for both the server and the client.
 ### yarn format
 
 Runs automated linting across the whole codebase.
+
+### `yarn server $cmd` and `yarn client $cmd`
+
+Convenience shortcuts for running `yarn` commands in either the server or the
+client, respectively.
